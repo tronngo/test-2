@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>LoGoGo</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+
+<body>
+    <div class="griddd container " id="griddd">
+        <div id="mainnav">
+            <ul>
+                <li class="thefirst">
+                    <a href="#">Dây chuyền</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" onclick="showdetail('daychuyen','vang')">Dây chuyền vàng</a></li>
+                        <li><a href="#" onclick="showdetail('daychuyen','bac')">Dây chuyền bạc</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Vòng tay</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" onclick="showdetail('vongtay','vang')">Vòng tay vàng</a></li>
+                        <li><a href="#" onclick="showdetail('vongtay','bac')">Vòng tay bạc</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Nhẫn</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" onclick="showdetail('nhan','vang')">Nhẫn vàng</a></li>
+                        <li><a href="#" onclick="showdetail('nhan','bac')">Nhẫn bạc</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Bông tai</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" onclick="showdetail('bongtai','vang')">Bông tai vàng</a></li>
+                        <li><a href="#" onclick="showdetail('bongtai','bac')">Bông tai bạc</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Đồng hồ</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" onclick="showdetail('dongho','vang')">Đồng hồ vàng</a></li>
+                        <li><a href="#" onclick="showdetail('dongho','bac')">Đồng hồ bạc</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="products">
+
+            <div class="container">
+                <button onclick="carts()" data-target="#exampleModal" class="btnbg-outline-success my-2 my-sm-0
+                            check-input" type="button">
+                            <i class="bi bi-cart-check" style="color:
+                                yellow;font-size: 40px;"></i>
+                            <span class="badge rounded-pill badge-notification
+                                bg-light" id="notification">0</span>
+                            </button>
+                <div id="product">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="chung" class="container">
+
+        <div id="viewww">
+            <div id="anha">
+            </div>
+
+            <div>
+                <div id="catNam">
+
+                </div>
+                <div id="catPrice">
+
+                </div>
+                <div>
+                    <p style="font-size: 25px;">Còn hàng</p>
+                    <h6 class="detail">
+                        <p id="sale">Ưu đãi</p>
+                        <p> Tặng Ecode 1 triệu cho hóa đơn Trang Sức Vàng từ 8 - 40 triệu <a href=""> Xem chi tiết</a></p>
+                        <p>Tặng Lịch PNJ 2022 cho hóa đơn Trang sức Vàng/Platinum từ 3 triệu. <a href=""> Xem chi tiết</a></p>
+                        <p>Thanh toán <a href=""> VNPAY-QR</a> nhận thêm ưu đãi</p>
+                    </h6>
+                </div>
+
+                <div id="button">
+
+
+                </div>
+                <div id="buyShopee">
+                    <div id="buy"> </div>
+                    <div id="buyShoppe"></div>
+                </div>
+                <br>
+                <div id="LuuY">
+                    <p>Do ảnh hưởng dịch Covid, thời gian giao hàng từ 3-10 ngày</p>
+                    <p> Giá sản phẩm thay đổi tuỳ trọng lượng vàng và đá</p>
+                    <p> Đổi sản phẩm trong 48h tại hệ thống cửa hàng PNJ</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <h2>Sản phẩm liên quan</h2>
+        <div id="banchays">
+            <div id="banchay">
+            </div>
+        </div>
+    </div>
+    <div id="divcart" class="container">
+        <H1>Giỏ hàng</H1>
+        <table class="table">
+
+        </table>
+        <table class="table" id="cartping">
+
+        </table>
+        <table>
+            <tr>
+                <td><label for="">Total</label><input class="ml-5" type="text" id="alltotal"> </td>
+
+
+            </tr>
+        </table>
+
+        <!-- gạch ngang và chỉnh butoon -->
+        <button class="btn bg-danger" onclick="backHome()"> Tiếp tục xem
+                giỏ
+                hàng</button>
+        <button class="btn bg-danger" onclick="moveiforcustomer()">Thanh tóan</button>
+    </div>
+    <div class="container" id="paya">
+
+        <h4 id="texth">THÔNG TIN KHÁCH HÀNG</h4>
+        <div class="radio">
+            <div id="gtinh"><input type="radio" name="gt" value="nam"> Nam</div>
+            <div id="gtinh"><input type="radio" name="gt" value="nu"> Nữ</div>
+        </div>
+        <br>
+        <form class="text">
+            <div class="text1">
+                <input id="name" style="width:291px;" type="text" placeholder="Họ tên (bắt buộc)">
+                <input id="email" style="width:291px;" type="text" name="email" placeholder="Email">
+            </div>
+            <div class="text2">
+                <input id="phone" style="width:291px;" type="text" name="phone" placeholder="SĐT (bắt buộc)">
+                <input id="date" style="width:291px;" type="text" name="date" placeholder="Ngày sinh(dd-mm-yyyy">
+            </div>
+        </form>
+        <br>
+        <h4>HÌNH THỨC NHẬN HÀNG</h4>
+        <div class="hinhthucTT">
+            <div id="shipping">
+                <b>Giao hàng tận nơi</b><br> (Miễn phí ship toàn quốc)
+            </div>
+            <form class="address">
+                <div class="address1">
+                    <input id="province" style="width:291px;" type="text" name="province" placeholder="Nhập tỉnh thành">
+                    <input id="distric" style="width:291px;" type="text" name="distric" placeholder="Nhập quận/huyện">
+                </div>
+                <div class="address2">
+                    <input id="commune" style="width:291px;" type="text" name="commune" placeholder="Nhập phường/xã">
+                    <input id="apartmentNumber" style="width:291px;" type="text" name="distric" placeholder="Nhập đường/số nhà">
+                </div>
+                <br>
+                <div>
+                    <input id="note" style="width:591px;" type="text" name="province" placeholder="Ghi chú khác">
+                </div>
+            </form>
+            <div>
+                <button type="submit" id="submit" onclick="payment()">Đặt hàng</button>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div id="detaibill">
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script src="user.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+</html>
